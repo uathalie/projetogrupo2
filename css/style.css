@@ -1,0 +1,92 @@
+body {
+	background-color: #232946;
+}
+
+.tituloPlano{
+	color: #eebbc3;
+}
+
+.sub{
+	color: #eebbc3;
+}
+
+.card-header-gratuito{
+	background-color: #808bbf;
+	color: #121629;
+}
+
+.btnGratis{
+	border: 2px solid;
+	border-color: #808bbf;
+}
+
+.btnGratis:hover{
+	background-color: #808bbf;
+	color: #eebbc3;
+}
+
+.card-header-mensal{
+	background-color: #232946;
+}
+
+.btnMensal{
+	border: 2px solid;
+	border-color: #232946;
+}
+
+.btnMensal:hover{
+	background-color: #232946;
+	color: #eebbc3;
+}
+
+.card-header-anual{
+	background-color: #121629;
+}
+
+.btnAnual{
+	border: 2px solid;
+	border-color: #121629;
+}
+
+.btnAnual:hover{
+	background-color: #121629;
+	color: #eebbc3;
+}
+
+.card-body{
+	background-color: #b8c1ec;
+}
+
+.compare{
+	color: #eebbc3;
+}
+
+.planos{
+	color: #eebbc3;
+}
+
+.text-start{
+	color: #eebbc3;
+}
+
+td{
+	color: #73c780;
+}
+
+.n{
+	color: #c24040;
+}
+
+.bd-placeholder-img {
+font-size: 1.125rem;
+text-anchor: middle;
+-webkit-user-select: none;
+-moz-user-select: none;
+user-select: none;
+}
+
+@media (min-width: 768px) {
+.bd-placeholder-img-lg {
+	  font-size: 3.5rem;
+	}
+}
