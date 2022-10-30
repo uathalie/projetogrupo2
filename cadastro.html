@@ -10,131 +10,152 @@
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
-  <body class="p-3 m-0 border-0 bd-example">
+    <header>
+      <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+          <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+            <img class="me-2" width="100" height="80" role="img" src="assets/img/logo.png"><use href="#home"/></img>
+          </a>
+    
+          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="#home" class="nav-link px-2 link-secondary">Home</a></li>
+            <li><a href="#servicos" class="nav-link px-2 link-dark">Planos</a></li>
+            <li><a href="#contato" class="nav-link px-2 link-dark">Contato</a></li>
+            <li><a href="#cadastro" class="nav-link px-2 link-dark">Lista de Espera</a></li>
+          </ul>
+    
+          <div class="col-md-3 text-end">
+            <button type="button" href="#login" id="btn1" class="btn me-2">Login</button>
+            <button type="button" href="#cadastro" id="btn2" class="btn">Cadastre-se</button>
+          </div>
+        </header>
+      </div>
+    </header>
     
     <form class="row g-3 needs-validation" novalidate="">
       <div class="col-md-4">
-        <label for="validationCustom01" class="form-label"><font style="vertical-align: inherit;">Nome</font></font></label>
-        <input type="text" class="form-control" id="validationCustom01"  required="">
+        <label for="validationCustom01" class="form-label"><font style="vertical-align: inherit;">Nome</font></label>
+        <input type="text" class="form-control"  required="">
         <div class="invalid-feedback"><font style="vertical-align: inherit; ">
           Por favor, insira seu nome.
-        </font></font></div>
+        </font></div>
       </div>
       <div class="col-md-4">
-        <label for="validationCustom02" class="form-label"><font style="vertical-align: inherit;">Email </font></font></label>
-        <input type="email" class="form-control" id="validationCustom01" required="">
+        <label for="validationCustom02" class="form-label"><font style="vertical-align: inherit;">Email </font></label>
+        <input type="email" class="form-control" required="">
         <div class="invalid-feedback"><font style="vertical-align: inherit;">
           Insira um email válido.
-        </font></font></div>
+        </font></div>
       </div>
       <div class="col-md-4">
-        <label for="validationCustom02"  class="form-label"><font style="vertical-align: inherit;"> RG </font></font></label>
-        <input type="text" class="form-control" id="validationCustom01" required="">
+        <label for="validationCustom02"  class="form-label"><font style="vertical-align: inherit;"> RG </font></label>
+        <input type="text" class="form-control" required="">
         <div class="invalid-feedback"><font style="vertical-align: inherit;">
           Insira seu RG corretamente.
-        </font></font></div>
+        </font></div>
       </div>
       <div class="col-md-4">
-        <label for="validationCustomUsername" class="form-label"><font style="vertical-align: inherit;"> Nome de usuário</font></font></label>
+        <label for="validationCustomUsername" class="form-label"><font style="vertical-align: inherit;"> Nome de usuário</font></label>
         <div class="input-group has-validation">
-          <span class="input-group-text" id="inputGroupPrepend"><font style="vertical-align: inherit;">@</font></font></span>
-          <input type="text" class="form-control" maxlength="10" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required="">
+          <span class="input-group-text"<font style="vertical-align: inherit;">@</font></span>
+          <input type="text" class="form-control" maxlength="10" aria-describedby="inputGroupPrepend" required="">
           <div class="invalid-feedback"><font style="vertical-align: inherit;">
             Por favor, escolha um nome de usuário.
-          </font></font></div>
+          </font></div>
         </div>
       </div>
 
       <div class="col-md-4">
-        <label for="validationCustom01" class="form-label"><font style="vertical-align: inherit;"> Senha </font></font></label>
-        <input type="password" maxlength="10" class="form-control" id="validationCustom01"  required="">
+        <label for="validationCustom01" class="form-label"><font style="vertical-align: inherit;"> Senha </font></label>
+        <input type="password" maxlength="10" class="form-control"  required="">
         Sua senha deve conter de 8 a 10 caracteres
-        </font></font></div>
+       </font></div>
       </div>
       <div class="col-md-4">
-        <label for="validationCustom02" class="form-label"><font style="vertical-align: inherit;"> Confirmação de Senha </font></font></label>
-        <input type="password" maxlength="10"  class="form-control" id="validationCustom02" required="">
-        </font></font></div>
+        <label for="validationCustom02" class="form-label"><font style="vertical-align: inherit;"> Confirmação de Senha </font></label>
+        <input type="password" maxlength="10"  class="form-control"  required="">
+        </font></div>
       </div>
       <form method="get" action=".">
       <div class="col-md-3">
-        <label for="validationCustom05"  class="form-label"><font style="vertical-align: inherit;"> CEP </font></font></label>
-        <input type="text" maxlength="8" class="form-control" id="cep" value="" size="10" 
+        <label for="validationCustom05"  class="form-label"><font style="vertical-align: inherit;"> CEP </font></label>
+        <input type="text" maxlength="8"  class="form-control" id="cep" value="" size="10" 
         onblur="pesquisacep(this.value);"required="">
         <div class="invalid-feedback"><font style="vertical-align: inherit;">
           Forneça um CEP válido.
-        </font></font></div>
+        </font></div>
       </div>
       <div class="col-md-6">
-        <label for="validationCustom03"  class="form-label"><font style="vertical-align: inherit;"> Rua </font></font></label>
+        <label for="validationCustom03"  class="form-label"><font style="vertical-align: inherit;"> Rua </font></label>
         <input name="rua" type="text" class="form-control" id="rua" required="">
         <div class="invalid-feedback"><font style="vertical-align: inherit;">
           Forneça uma rua válida.
-        </font></font></div>
+        </font></div>
       </div>
       <div class="col-md-3">
-        <label for="validationCustom05"  class="form-label"><font style="vertical-align: inherit;"> Número </font></font></label>
+        <label for="validationCustom05"  class="form-label"><font style="vertical-align: inherit;"> Número </font></label>
         <input type="text" class="form-control" required="">
         <div class="invalid-feedback"><font style="vertical-align: inherit;">
           Forneça um número válido.
-        </font></font></div>
+        </font></div>
       </div>
       <div class="col-md-4">
-        <label for="validationCustom01"  class="form-label"><font style="vertical-align: inherit;"> Estado </font></font></label>
+        <label for="validationCustom01"  class="form-label"><font style="vertical-align: inherit;"> Estado </font></label>
         <input name="uf" type="text" class="form-control" id="uf"  required="">
         <div class="valid-feedback"><font style="vertical-align: inherit">
-        </font></font></div>
+        </font></div>
       </div>
       <div class="col-md-4">
-        <label for="validationCustom01"  class="form-label"><font style="vertical-align: inherit;"> Bairro </font></font></label>
+        <label for="validationCustom01"  class="form-label"><font style="vertical-align: inherit;"> Bairro </font></label>
         <input name="bairro" type="text" class="form-control" id="bairro"  required="">
         <div class="valid-feedback"><font style="vertical-align: inherit;">
-        </font></font></div>
+        </font></div>
       </div>
       <div class="col-md-4">
-        <label for="validationCustom01"  class="form-label"><font style="vertical-align: inherit;"> Cidade </font></font></label>
+        <label for="validationCustom01"  class="form-label"><font style="vertical-align: inherit;"> Cidade </font></label>
         <input name="cidade" type="text" class="form-control" id="cidade"  required="">
         <div class="valid-feedback"><font style="vertical-align: inherit;">
-        </font></font></div>
+        </font></div>
       </div>
 
       <div class="col-md-6">
-        <label for="validationCustom02" class="form-label"> Complemento </font></font></label>
-        <input type="text" class="form-control" id="validationCustom02" required="">
+        <label for="validationCustom02" class="form-label"> Complemento </font></label>
+        <input type="text" class="form-control"  required="">
         <div class="invalid-feedback"><font style="vertical-align: inherit;">
           Insira um complemento.
-        </font></font></div>
+        </font></div>
         </div>
       <div class="col-12">
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required="">
           <label class="form-check-label" for="invalidCheck"><font style="vertical-align: inherit;color: #eebbc3">
             Concorde com os termos e condições
-          </font></font></label>
+          </font></label>
           <div class="invalid-feedback"><font style="vertical-align: inherit;">
             Você deve concordar antes de enviar.
-          </font></font></div>
+          </font></div>
         </div>
         <div class="col-12">
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required="">
             <label class="form-check-label" for="invalidCheck"><font style="vertical-align: inherit;color: #eebbc3">
               Aceite fazer parte da nossa lista de espera ou receber nossas atualizações por email.
-            </font></font></label>
+            </font></label>
             <div class="invalid-feedback"><font style="vertical-align: inherit;">
               Você deve concordar antes de enviar.
-            </font></font></div>
+            </font></div>
           </div>
-    
+    <center>
       <div class="col-12">
-        <button class="btn btn-primary" id="Btn"><font style="vertical-align:center;"><font style="vertical-align: inherit;">Enviar</font></font></button>
+        <button class="btn btn-primary" id="Btn"><font style="vertical-align:center;"><font style="vertical-align: inherit;">Enviar</font></button>
       </div>
+    </center>
     </div>
     </form>
     </form>
     <script src="js/script.js"></script>
     <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js " > </script> 
     <!-- End Example Code -->
-  </body>
+</body>
 </body>
 </html>

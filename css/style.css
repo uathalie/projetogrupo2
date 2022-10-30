@@ -1,6 +1,36 @@
-.bd-example {
+/* estilo header */
+header{
+  background-color:#b8c1ec;
+}
+
+#btn1{
+  border-color: #232946;
+}
+
+#btn1:hover{
   background-color: #232946;
   color: #eebbc3;
+  }
+
+#btn2{
+  background-color: #232946;
+  color: white;
+}
+
+#btn2:hover{
+color: #eebbc3;
+}
+
+/* Padronizando body e elementos */
+
+
+body {
+  background-color: #232946;
+  color: #eebbc3;
+}
+
+.row{
+  padding: 10px;
 }
 
 #input-type {

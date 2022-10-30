@@ -9,12 +9,21 @@
   Array.from(forms).forEach(form => {
     form.addEventListener('submit', event => {
       if (!form.checkValidity()) {
-        swal ("Preencha todos os campos corretamente")
+        swal({
+          title: "Seu cadastro não foi concluído",
+          text: "Preencha todos os campos",
+          icon: "warning",
+        });
         event.preventDefault()
         event.stopPropagation()
       }
       else{
-        swal ("Seu cadastro foi concluído com sucesso" , "Em breve entramos em contato" , " sucess " )   ;
+        swal({
+          title: "Seu cadastro foi concluído com sucesso!",
+          text: "Aguarde nosso contato por email com mais informações",
+          icon: "success",
+          button: "OK",
+        });
       }
       form.classList.add('was-validated')
     }
@@ -25,26 +34,30 @@
 
 // API de Cep-------------------------------------------------------------
 
-function limpa_formulário_cep() {
-  //Limpa valores do formulário de cep.
+function limpaC() {
+  //Limpa cep.
   document.getElementById('rua').value=("");
   document.getElementById('bairro').value=("");
   document.getElementById('cidade').value=("");
   document.getElementById('uf').value=("");
 }
 
-function meu_callback(conteudo) {
+function retornoC(conteudo) {
 if (!("erro" in conteudo)) {
-  //Atualiza os campos com os valores.
+  //Atualizar
   document.getElementById('rua').value=(conteudo.logradouro);
   document.getElementById('bairro').value=(conteudo.bairro);
   document.getElementById('cidade').value=(conteudo.localidade);
   document.getElementById('uf').value=(conteudo.uf);
-} //end if.
+} 
 else {
   //CEP não Encontrado.
-  limpa_formulário_cep();
-  alert("CEP não encontrado.");
+  limpaC();
+  swal({
+    title: "Cep não encontrado",
+    text: "Revise o campo cep",
+    icon: "warning",
+  });
 }
 }
 
@@ -62,7 +75,7 @@ if (cep != "") {
   //Valida o formato do CEP.
   if(validacep.test(cep)) {
 
-      //Preenche os campos com "..." enquanto consulta webservice.
+      //Retotno enquanto consulta
       document.getElementById('rua').value="...";
       document.getElementById('bairro').value="...";
       document.getElementById('cidade').value="...";
@@ -72,24 +85,24 @@ if (cep != "") {
       var script = document.createElement('script');
 
       //Sincroniza com o callback.
-      script.src = 'https://viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback';
+      script.src = 'https://viacep.com.br/ws/'+ cep + '/json/?callback=retornoC';
 
       //Insere script no documento e carrega o conteúdo.
       document.body.appendChild(script);
 
-  } //end if.
+  } 
   else {
-      //cep é inválido.
-      limpa_formulário_cep();
-      alert("Formato de CEP inválido.");
+      //cep inválido.
+      limpaC();
+      swal({
+        title: "Cep não encontrado",
+        text: "Revise o campo cep",
+        icon: "warning",
+      });
   }
-} //end if.
+} 
 else {
   //cep sem valor, limpa formulário.
-  limpa_formulário_cep();
+  limpaC();
 }
 };
-
-// function swal('click', botao){
-//   swal("Envio Concluído", "Aguarde nosso contato", "success");
-// }
