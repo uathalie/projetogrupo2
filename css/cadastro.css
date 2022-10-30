@@ -1,0 +1,61 @@
+/* estilo header */
+header{
+  background-color:#b8c1ec;
+}
+
+#btn1{
+  border-color: #232946;
+}
+
+#btn1:hover{
+  background-color: #232946;
+  color: #eebbc3;
+  }
+
+#btn2{
+  background-color: #232946;
+  color: white;
+}
+
+#btn2:hover{
+color: #eebbc3;
+}
+
+/* Padronizando body e elementos */
+
+
+body {
+  background-color: #232946;
+  color: #eebbc3;
+}
+
+.row{
+  padding: 10px;
+}
+
+#input-type {
+  color: #232946;
+  background-color: #eebbc3;
+}
+.input-group-text {
+  color: #232946;
+  background-color: #eebbc3;
+}
+.btn:hover{
+  background-color:#b8c1ec;
+  color: #232946;
+}
+.btn-primary{
+color: #232946;
+background-color: #eebbc3;
+text-align: center;
+}
+.form-control{
+  background-color:#b8c1ec;
+}
+.invalid-feedback{
+  color: #eebbc3;
+}
+.valid-feedback{
+  color: #eebbc3;
+}
