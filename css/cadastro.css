@@ -5,6 +5,7 @@ header{
 
 #btn1{
   border-color: #232946;
+  color: #232946;
 }
 
 #btn1:hover{
@@ -19,6 +20,10 @@ header{
 
 #btn2:hover{
 color: #eebbc3;
+}
+
+a.nav-link:hover{
+  color: #eebbc3;
 }
 
 /* Padronizando body e elementos */
