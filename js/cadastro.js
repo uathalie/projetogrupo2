@@ -24,6 +24,7 @@
           icon: "success",
           button: "OK",
         });
+        event.preventDefault()
       }
       form.classList.add('was-validated')
     }
